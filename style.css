@@ -61,9 +61,12 @@ body {
     height: 100vh;
     padding: none;
     margin: 0;
+    overflow: hidden;
 }
 
 header {
+    position: fixed;
+    top: 0;
     max-height: 15%;
     min-height: 7rem;
 }
@@ -101,5 +104,5 @@ header {
 }
 
 main {
-    margin-top: 5rem;
+    margin-top: 10rem;
 }
