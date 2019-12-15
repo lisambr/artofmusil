@@ -4,9 +4,11 @@
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Art of Musil</title>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+        />
         <link rel="stylesheet" href="style.css" />
-
     </head>
 
     <body>
@@ -33,19 +35,9 @@
             <div class="header-divider"></div>
         </header>
         <main>
-            <article>
-                <div class="textbox">
-                    <h1 class="painting-title">TITLE GOES HERE</h1>
-                    <p class="painting-des">DESCRIPTION GOES HERE Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto, commodi dolorum. Fugit suscipit enim animi? Accusantium quod fuga quo ipsum ipsa voluptas ut sint amet voluptatum vitae dolores reprehenderit doloremque quos a iure praesentium corrupti repellat fugiat rem molestias iste dolorem, magni. Voluptatum incidunt illum sint id, voluptates explicabo nobis!</p>
-                </div>
-                <img src="#" alt="Alt text goes here" class="painting" />
-                <div class="medium-box">
-                   <h2 class="box-title">Title goes here</h1>
-                    <p class="medium-text">This is for the medium</p>
-                </div>
 
-            </article>
         </main>
+        <div class="scroll"></div>
         <footer>
             <a href="assets/MusilFont-Regular.ttf" class="instagram">
                 <i class="fa fa-instagram"></i>
@@ -54,6 +46,30 @@
                 <i class="fa fa-envelope"></i>
             </a>
         </footer>
+        <template>
+            <div class="article-wrap">
+                <article>
+                    <div class="textbox">
+                        <h1 class="painting-title">TITLE GOES HERE</h1>
+                        <p class="painting-des">
+                            DESCRIPTION GOES HERE Lorem ipsum dolor sit amet,
+                            consectetur adipisicing elit. Iusto, commodi dolorum.
+                            Fugit suscipit enim animi? Accusantium quod fuga quo
+                            ipsum ipsa voluptas ut sint amet voluptatum vitae
+                            dolores reprehenderit doloremque quos a iure praesentium
+                            corrupti repellat fugiat rem molestias iste dolorem,
+                            magni. Voluptatum incidunt illum sint id, voluptates
+                            explicabo nobis!
+                        </p>
+                    </div>
+                    <img src="assets/Screen%20Shot%202019-12-15%20at%2018.48.14.png" alt="Alt text goes here" class="painting" />
+                    <div class="medium-box">
+                        <h2 class="box-title">Title goes here</h2>
+                        <p class="medium-text">This is for the medium</p>
+                    </div>
+                </article>
+            </div>
+        </template>
         <script src="main.js"></script>
     </body>
 </html>

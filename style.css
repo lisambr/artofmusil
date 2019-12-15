@@ -75,7 +75,6 @@ body {
     height: 100vh;
     padding: none;
     margin: 0;
-    overflow: hidden;
             font-family: "Helvetica Neue", "Open Sans", sans-serif;
 }
 
@@ -119,14 +118,22 @@ header {
 }
 
 main {
+    position: fixed;
+    top:12rem;
+    left: 20px;
     display: flex;
-    margin-top: 12rem;
     max-height: 70%;
+    align-items: center;
+}
+
+.article-wrap {
+    min-width: 100vw;
+    text-align: center;
 }
 
 article {
+    display: inline-block;
     position: relative;
-    display: flex;
     margin: auto;
 }
 
@@ -145,8 +152,8 @@ article {
     border-right: none;
     border-radius: 5px 0 0 5px;
     padding: 0 0.5rem 0 0.5rem;
-    width: 60%;
-    left: -60%;
+    width:10rem;
+    left: -10rem;
 }
 
 .medium-box {
@@ -162,3 +169,15 @@ article {
     margin-left: 1rem;
     font-family: 'Musil';
 }
+
+/* HORIZANTAL SCROLL*/
+.scroll {
+    --main-width: 1;
+    height: calc(var(--main-width)*100vw);
+}
+
+::-webkit-scrollbar {
+    width: 0px;
+    background: transparent;
+}
+
