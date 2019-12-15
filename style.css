@@ -1,6 +1,23 @@
-*{
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap');
 
+:root {
+    --font-color: #000;
 }
+
+*{
+box-sizing: border-box;
+    font-family: 'Helvetica Neue', 'Open Sans', sans-serif
+}
+a {
+    text-decoration: none;
+    color: var(--font-color);
+}
+
+ul {
+    list-style-type: none;
+}
+
+/* INDEX PAGE | VIDEO AND LINK */
 
 #indexbody {
     overflow: hidden;
@@ -37,4 +54,52 @@
 
 #indexlogo {
     width: 30rem
+}
+
+
+body {
+    height: 100vh;
+    padding: none;
+    margin: 0;
+}
+
+header {
+    max-height: 15%;
+    min-height: 7rem;
+}
+
+.header-wrap {
+    padding: 1rem 2rem 0 2rem;
+        display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#logo {
+    height: 6rem;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-around;
+    font-size: 2rem;
+    padding: 0;
+    margin: 0;
+    text-transform: uppercase;
+}
+
+.navpoint {
+    margin: 1rem;
+}
+
+.header-divider {
+    width: 90vw;
+    height: 2px;
+    background-color: #000;
+    margin-top: 2rem;
+    margin-left: 5vw;
+}
+
+main {
+    margin-top: 5rem;
 }
