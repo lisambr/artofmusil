@@ -142,10 +142,16 @@ article {
     z-index: 2;
     max-width: 100%;
     margin: auto;
+    box-shadow: 4px 8px 8px rgba(0,0,0,.4)
+}
+
+.painting:hover {
+    box-shadow: 5px 10px 10px rgba(0,0,0,.5);
 }
 .textbox {
     position: absolute;
     top: 2rem;
+    left: 0;
     z-index: -2;
     word-wrap: break-word;
     border: 1px var(--font-color) solid;
@@ -153,7 +159,11 @@ article {
     border-radius: 5px 0 0 5px;
     padding: 0 0.5rem 0 0.5rem;
     width:10rem;
-    left: -10rem;
+    transition: left 1s;
+}
+
+.movetextbox {
+    left: -10rem
 }
 
 .medium-box {
