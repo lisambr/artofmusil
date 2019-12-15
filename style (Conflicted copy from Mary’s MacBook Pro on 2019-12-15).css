@@ -1,0 +1,47 @@
+*{
+box-sizing: border-box;
+}
+
+/* INDEX PAGE | VIDEO AND LINK */ 
+
+#indexbody {
+    overflow: hidden;
+}
+
+#titlevid {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -2;
+    width: 100vw;
+    background-color: #0002e
+}
+
+#indexshade {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width: 100vw;
+    height: 100vh;
+    background: #fff;
+    opacity: .7;
+}
+
+#logolink {
+    z-index: 100;
+    position: absolute;
+    left: 50%;
+    margin-left: -15rem;
+    top: 50%;
+    margin-top: -15rem;
+}
+
+#indexlogo {
+    width: 30rem
+}
+
+header {
+    height: 20%;
+}
+

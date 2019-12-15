@@ -1,12 +1,16 @@
-@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap');
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap");
+@font-face {
+    font-family: Musil;
+    src: url(assets/MusilFont-Regular.ttf);
+    font-weight: bold;
+}
 
 :root {
     --font-color: #000;
 }
 
-*{
-box-sizing: border-box;
-    font-family: 'Helvetica Neue', 'Open Sans', sans-serif
+* {
+    box-sizing: border-box;
 }
 a {
     text-decoration: none;
@@ -29,7 +33,7 @@ ul {
     left: 0;
     z-index: -2;
     width: 100vw;
-    background-color: #0002e
+    background-color: #0002e;
 }
 
 #indexshade {
@@ -40,7 +44,7 @@ ul {
     width: 100vw;
     height: 100vh;
     background: #fff;
-    opacity: .7;
+    opacity: 0.7;
 }
 
 #logolink {
@@ -53,15 +57,26 @@ ul {
 }
 
 #indexlogo {
-    width: 30rem
+    width: 30rem;
 }
 
-
+footer {
+    height: 5vh;
+    width: 100vw;
+    position: fixed;
+    bottom: 0;
+    padding-left: 2rem;
+}
+.fa {
+    font-size: 2rem;
+    margin-left: 1rem;
+}
 body {
     height: 100vh;
     padding: none;
     margin: 0;
     overflow: hidden;
+            font-family: "Helvetica Neue", "Open Sans", sans-serif;
 }
 
 header {
@@ -73,7 +88,7 @@ header {
 
 .header-wrap {
     padding: 1rem 2rem 0 2rem;
-        display: flex;
+    display: flex;
     justify-content: space-between;
     align-items: center;
 }
@@ -104,5 +119,46 @@ header {
 }
 
 main {
-    margin-top: 10rem;
+    display: flex;
+    margin-top: 12rem;
+    max-height: 70%;
+}
+
+article {
+    position: relative;
+    display: flex;
+    margin: auto;
+}
+
+.painting {
+    position: relative;
+    z-index: 2;
+    max-width: 100%;
+    margin: auto;
+}
+.textbox {
+    position: absolute;
+    top: 2rem;
+    z-index: -2;
+    word-wrap: break-word;
+    border: 1px var(--font-color) solid;
+    border-right: none;
+    border-radius: 5px 0 0 5px;
+    padding: 0 0.5rem 0 0.5rem;
+    width: 60%;
+    left: -60%;
+}
+
+.medium-box {
+    position: absolute;
+    right: -11rem;
+    bottom: 2rem;
+    border: 1px var(--font-color) solid;
+    border-radius: 5px;
+    height: 8rem;
+    width: 10rem;
+    word-wrap: break-word;
+    padding: 0 0.5rem 0 0.5rem;
+    margin-left: 1rem;
+    font-family: 'Musil';
 }
