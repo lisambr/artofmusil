@@ -323,18 +323,15 @@ article {
     justify-content: center;
 }
 
+.contact-body {
+    line-height: 1.5rem;
+}
+
 .textcontent {
     width: 25%;
     text-align: end;
     margin: 5vw;
 }
-
-/*
-.contact-title {
-    font-family: 'Musil';
-    font-size: 5rem;
-}
-*/
 
 form {
     width: 40%;
@@ -343,8 +340,10 @@ form {
 input {
     width: 60%;
     height: 2rem;
+    border: .5px solid var(--font-color)
 }
 
 textarea {
     width: 60%;
+    border: .5px solid var(--font-color)
 }
