@@ -3,7 +3,11 @@
     <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Art of Musil</title>
+        <title>Art of Musil | Musil</title>
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+        />
         <link rel="stylesheet" href="style.css" />
     </head>
 
@@ -30,22 +34,46 @@
             </div>
             <div class="header-divider"></div>
         </header>
-        <main>
-            <article>
-                <img src="#" alt="Alt text goes here" class="painting">
-                <div class="medium-box">
-                    <p class="medium-text"></p>
-                </div>
-            </article>
+        <main id="main-musil">
+
+        <div class="musil-wrap">
+          <div class="the-artist"><h2>THE ARTIST</h2></div>
+          <div class="the-human"><h2>THE HUMAN</h2></div>
+           <div class="musil-short">
+              <h2>THE ARTIST</h2>
+               <h3 id="musilh3">SHORT DESCRIPTION HERE Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex rerum nostrum itaque eligendi id odio cum earum distinctio veritatis inventore.</h3>
+           </div>
+           <div class="musil-long">
+              <h2>THE HUMAN</h2>
+               <p id="musilp">LONG DESCRIPTION HERE Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta atque, vero enim explicabo a mollitia modi accusantium amet nisi inventore odio laborum est exercitationem, possimus necessitatibus! Sit veniam neque sequi magni exercitationem aliquam provident soluta, iusto voluptatum, recusandae earum, optio!</p>
+           </div>
+            <img src="assets/mikkel.jpg" alt="Mikkel" id="creepyface">
+        </div>
+<!--
+<img id="creepyface"
+  data-creepyface
+  src="assets/face/serious.jpg"
+  data-src-hover="assets/face/serious.jpg"
+  data-src-look-0="assets/face/north.jpg"
+  data-src-look-45="assets/face/north-east.jpg"
+  data-src-look-90="assets/face/east.jpg"
+  data-src-look-135="assets/face/south-east.jpg"
+  data-src-look-180="assets/face/south.jpg"
+  data-src-look-225="assets/face/south-west.jpg"
+  data-src-look-270="assets/face/north-west.jpg"
+  data-src-look-315="assets/face/north-west.jpg"
+/>
+-->
         </main>
         <footer>
             <a href="#" class="instagram">
-                <img src="#" alt="Instagram Icon" id="instagram" />
+                <i class="fa fa-instagram"></i>
             </a>
             <a href="#" class="mail">
-                <img src="#" alt="Mail Icon" id="mail" />
+                <i class="fa fa-envelope"></i>
             </a>
         </footer>
-        <script src="main.js"></script>
+<!--        <script src="https://creepyface.io/creepyface.js"></script>-->
+        <script src="musil.js"></script>
     </body>
 </html>

@@ -117,10 +117,9 @@ header {
     margin-left: 5vw;
 }
 
-main {
+#main-gallery {
     position: fixed;
     top:12rem;
-    left: 20px;
     display: flex;
     max-height: 70%;
     align-items: center;
@@ -190,4 +189,88 @@ article {
     width: 0px;
     background: transparent;
 }
+
+/* END HZ SCROLL */
+
+#creepyface {
+    position: relative;
+    z-index: 0;
+    width: 100%;
+}
+
+#main-musil {
+    margin-top:12rem;
+    max-height: 70%;
+    text-align: center;
+}
+
+.musil-wrap {
+    width: 35%;
+    display: inline-block;
+    position: relative;
+}
+
+.musil-short {
+    position: absolute;
+     word-wrap: break-word;
+    border: 1px var(--font-color) solid;
+    border-right: none;
+    border-radius: 5px 0 0 5px;
+    padding: 0 0.5rem 0 0.5rem;
+    width: 60%;
+    height: 90%;
+    top: 5%;
+    left: 0;
+    z-index: -1;
+    transition: left .5s;
+}
+
+.musil-long {
+     position: absolute;
+     word-wrap: break-word;
+    border: 1px var(--font-color) solid;
+    border-left: none;
+    border-radius: 0 5px 5px 0;
+    padding: 0 0.5rem 0 0.5rem;
+    width: 60%;
+    height: 90%;
+    top: 5%;
+    right: 0;
+    z-index: -1;
+     transition: right .5s;
+}
+
+.the-artist {
+    position: absolute;
+    color: #fff;
+    width: 60%;
+    top: 5%;
+    left: 0;
+     padding: 0 0.5rem 0 0.5rem;
+    overflow: hidden;
+    z-index: 1;
+    height: 100%;
+     transition: all .5s;
+}
+
+.the-human {
+    position: absolute;
+    color: #fff;
+    width: 60%;
+    top: 5%;
+    right: 0;
+    padding: 0 0.5rem 0 0.5rem;
+    overflow: hidden;
+    z-index: 1;
+    height: 100%;
+     transition: all .5s;
+}
+
+.the-artist h2,
+.the-human h2 {
+    transition: all .5s;
+}
+
+
+
 
