@@ -65,10 +65,10 @@ svg {
 }
 
 footer {
-    height: 5vh;
+    height: 8vh;
     width: 100vw;
     position: fixed;
-    bottom: 0;
+    bottom: 1vh;
     padding-left: 2rem;
 }
 .fa {
@@ -137,22 +137,52 @@ header {
     align-items: center;
 }
 
+/* SCROLL OVERVIEW */
+.progressbar {
+    position: relative;
+    width: 90vw;
+    margin: 0 auto;
+    margin-bottom: 1rem;
+    height: .7rem;
+    border: .5px solid var(--font-color);
+    border-radius: 5px;
+}
+
+.progress {
+    position: relative;
+    transition: smooth;
+    left: 0;
+    width: 4%;
+    margin: 0;
+    height: .7rem;
+    background-color: var(--font-color);
+    border-radius: 5px;
+
+}
+
+
 .article-wrap {
-    min-width: 100vw;
-    text-align: center;
+/*
+    --img-width: 200px;
+    width: calc(50vw + var(--img-width));
+*/
+    width: 60vw;
+    margin-right: 10vw;
+    text-align: end;
 }
 
 article {
     display: inline-block;
     position: relative;
     margin: auto;
+    text-align: center;
 }
 
 .painting {
     position: relative;
     z-index: 2;
     box-shadow: 4px 8px 8px rgba(0,0,0,.4);
-        padding: 0;
+    padding: 0;
     display: block;
     margin: 0 auto;
     max-height: 100%;
@@ -161,20 +191,22 @@ article {
 
 .textbox {
     position: absolute;
-    top: 2rem;
+    top: 5vh;
     left: 0;
     z-index: -2;
+    max-height: 55vh;
+    overflow: scroll;
     word-wrap: break-word;
     border: 1px var(--font-color) solid;
     border-right: none;
     border-radius: 5px 0 0 5px;
     padding: 0 0.5rem 0 0.5rem;
-    width:10rem;
+    width:13rem;
     transition: left 1s;
 }
 
 .movetextbox {
-    left: -10rem
+    left: -13rem
 }
 
 .medium-box {
@@ -200,7 +232,7 @@ article {
 /* HORIZANTAL SCROLL*/
 .scroll {
     --main-width: 1;
-    height: calc(var(--main-width)*100vw);
+    height: calc(var(--main-width)*70vw);
 }
 
 ::-webkit-scrollbar {
