@@ -219,7 +219,7 @@ article {
 }
 
 .img-wrap-musil {
-    height: 70vh;
+    height: 100%;
     margin: 0;
     padding: 0;
 }
@@ -257,11 +257,11 @@ article {
     border: 1px var(--font-color) solid;
     border-right: none;
     border-radius: 5px 0 0 5px;
-    padding: 0 0.5rem 0 0.5rem;
-    width: 50%;
+    padding: 0 4rem 0 0.5rem;
+    width: 55%;
     height: 90%;
     top: 5%;
-    left: 5%;
+    left: 10%;
     z-index: -1;
     transition: left .5s;
 }
@@ -272,11 +272,11 @@ article {
     border: 1px var(--font-color) solid;
     border-left: none;
     border-radius: 0 5px 5px 0;
-    padding: 0 0.5rem 0 0.5rem;
-    width: 50%;
+    padding: 0 0.5rem 0 4rem;
+    width: 55%;
     height: 90%;
     top: 5%;
-    right: 5%;
+    right: 10%;
     z-index: -1;
      transition: right .5s;
 }

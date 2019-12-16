@@ -30,7 +30,7 @@ function hoverArtist() {
 }
 
 function leaveArtist() {
-    shortBox.style.left = "5%";
+    shortBox.style.left = "10%";
     artistTxt.style.transform = "translateX(0)";
     artist.addEventListener("mouseleave", leaveArtist);
     artist.addEventListener("mouseenter", hoverArtist);
@@ -55,7 +55,7 @@ function hoverHuman() {
 }
 
 function leaveHuman() {
-    longBox.style.right = "5%";
+    longBox.style.right = "10%";
     humanTxt.style.transform = "translateX(0)";
     human.addEventListener("mouseleave", leaveHuman);
     human.addEventListener("mouseenter", hoverHuman);
