@@ -60,7 +60,9 @@ ul {
     width: 30rem;
 }
 
-
+svg {
+    font-family: "Musil", "Helvetica Neue", "Open Sans", sans-serif;
+}
 
 footer {
     height: 5vh;
@@ -153,8 +155,8 @@ article {
         padding: 0;
     display: block;
     margin: 0 auto;
-    max-height: 90%;
-    max-width: 90%;
+    max-height: 100%;
+    max-width: 100%;
 }
 
 .textbox {
@@ -191,7 +193,7 @@ article {
 
 .box-title {
     font-family: 'Musil', 'Helvetica Neue', 'Open Sans', sans-serif;
-    font-size: 1.7rem;
+    font-size: 1.9rem;
     margin-bottom: .5rem;
 }
 
@@ -208,8 +210,16 @@ article {
 
 /* END HZ SCROLL */
 
-.img-wrap {
-    height: 100%;
+.img-wrap-gallery {
+    height: 60vh;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+}
+
+.img-wrap-musil {
+    height: 70vh;
     margin: 0;
     padding: 0;
 }
@@ -302,6 +312,39 @@ article {
     transition: all .5s;
 }
 
+#contact-body {
+    overflow: hidden;
+}
 
+#contact-main {
+    height: 60vh;
+    margin-top: 12rem;
+    display: flex;
+    justify-content: center;
+}
 
+.textcontent {
+    width: 25%;
+    text-align: end;
+    margin: 5vw;
+}
 
+/*
+.contact-title {
+    font-family: 'Musil';
+    font-size: 5rem;
+}
+*/
+
+form {
+    width: 40%;
+}
+
+input {
+    width: 60%;
+    height: 2rem;
+}
+
+textarea {
+    width: 60%;
+}
