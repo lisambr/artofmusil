@@ -26,14 +26,14 @@ function postPaint(paints) {
     const painting = paints.painting.guid;
     const id = paints.id;
 
-    clone.querySelector(".painting-title").innerHTML = title;
-    clone.querySelector(".painting-des").innerHTML = des;
+//    clone.querySelector(".painting-title").innerHTML = title;
+//    clone.querySelector(".painting-des").innerHTML = des;
     clone.querySelector(".painting").setAttribute("src", painting);
     clone.querySelector(".painting").setAttribute("alt", "The painting" + title);
     clone.querySelector(".painting").setAttribute("id", id);
     clone.querySelector(".box-title").innerHTML = title;
     clone.querySelector(".medium-text").innerHTML = medium;
-    clone.querySelector(".textbox").classList.add("class" + id)
+//    clone.querySelector(".textbox").classList.add("class" + id)
 
     main.appendChild(clone);
 
