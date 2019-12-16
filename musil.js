@@ -18,28 +18,28 @@ var artistTxt = document.querySelector(".the-artist h2");
 var humanTxt = document.querySelector(".the-human h2");
 
 artist.addEventListener("mouseenter", function() {
-    shortBox.style.left = "-7%";
+    shortBox.style.left = "0%";
     artistTxt.style.transform = "translateX(-7%)";
 });
 artist.addEventListener("mouseleave", function() {
-    shortBox.style.left = "0";
+    shortBox.style.left = "5%";
     artistTxt.style.transform = "translateX(0)";
 });
 artist.addEventListener("click", function() {
-    shortBox.style.left = "-60%";
+    shortBox.style.left = "-40%";
     artistTxt.style.transform = "translateX(-100%)";
 });
 
 human.addEventListener("mouseenter", function() {
-    longBox.style.right = "-7%";
+    longBox.style.right = "0";
     humanTxt.style.transform = "translateX(7%)";
 });
 human.addEventListener("mouseleave", function() {
-    longBox.style.right = "0";
+    longBox.style.right = "5%";
     humanTxt.style.transform = "translateX(0)";
 });
 human.addEventListener("click", function() {
-    longBox.style.right = "-60%";
+    longBox.style.right = "-40%";
     humanTxt.style.transform = "translateX(100%)";
 });
 
