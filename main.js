@@ -33,11 +33,12 @@ function postPaint(paints) {
     clone.querySelector(".painting").setAttribute("id", id);
     clone.querySelector(".box-title").innerHTML = title;
     clone.querySelector(".medium-text").innerHTML = medium;
+    clone.querySelector(".textbox").classList.add("class" + id)
 
     main.appendChild(clone);
 
     document.getElementById(id).addEventListener("click", function() {
-        document.querySelector(".textbox").classList.toggle("movetextbox");
+        document.querySelector(".class"+id).classList.toggle("movetextbox");
     })
 
     //HORIZONTAL SCROLL
