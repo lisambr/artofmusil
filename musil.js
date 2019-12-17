@@ -107,7 +107,6 @@ if (window.innerWidth > 900) {
                 location.href = "contact.html";
             });
             menuCount++;
-            console.log(menuCount);
         } else {
             nav.style.height = "0";
             navGal.style.top = "-5rem";
