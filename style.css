@@ -33,7 +33,7 @@ ul {
     position: absolute;
     top: 0;
     left: 0;
-    z-index: -2;
+    z-index: -3;
     width: 100vw;
     background-color: #0002e;
 }
@@ -42,7 +42,7 @@ ul {
     position: absolute;
     top: 0;
     left: 0;
-    z-index: 1;
+    z-index: -2;
     width: 100vw;
     height: 100vh;
     background: #fff;
@@ -92,8 +92,18 @@ header {
     min-height: 7rem;
 }
 
+.header-bg{
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: -1;
+    width: 100vw;
+    height: 8.5rem;
+    background-color: #fff;
+}
+
 .header-wrap {
-    padding: 1rem 2rem 0 6rem;
+    padding: 1rem 2rem .5rem 6rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -129,7 +139,6 @@ header {
     width: 90vw;
     height: .5px;
     background-color: #000;
-    margin-top: 1rem;
     margin-left: 5vw;
 }
 
@@ -150,6 +159,7 @@ header {
     height: .7rem;
     border: .5px solid var(--font-color);
     border-radius: 5px;
+    z-index: 10;
 }
 
 .progress {
@@ -162,7 +172,6 @@ header {
     background-color: var(--font-color);
     border-radius: 5px;
     cursor: pointer;
-
 }
 
 
@@ -279,7 +288,7 @@ article {
 }
 
 #main-musil {
-    margin-top:12rem;
+    margin-top:10rem;
     height: 70%;
     text-align: center;
 }
