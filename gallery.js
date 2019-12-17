@@ -65,6 +65,12 @@ function postPaint(paints) {
     scrollDiv.style.setProperty("--main-width", counter);
 }
 
+
+
+
+// DESKTOP VERSION
+
+if (window.innerWidth > 900) {
 // HORIZONTAL SCROLL
 window.addEventListener("scroll", function() {
     var scrollPos = window.scrollY;
@@ -109,4 +115,5 @@ function moveBar(e) {
     scrollPosi = (progress * height) / 100;
     window.scroll(0, scrollPosi);
     main.style.left = "-" + scrollPosi + "px";
+}
 }

@@ -17,6 +17,11 @@ var longBox = document.querySelector(".musil-long");
 var artistTxt = document.querySelector(".the-artist h2");
 var humanTxt = document.querySelector(".the-human h2");
 
+
+
+// DESKTOP VERSION
+
+if (window.innerWidth > 900) {
 artist.addEventListener("mouseenter", hoverArtist);
 artist.addEventListener("mouseleave", leaveArtist);
 artist.addEventListener("click", clickArtist);
@@ -78,4 +83,5 @@ function humanClose() {
 function postDes(description) {
     document.getElementById("musilh3").innerHTML = description.short_des;
     document.getElementById("musilp").innerHTML = description.long_des;
+}
 }
