@@ -39,10 +39,16 @@ function postPaint(paints) {
     clone.querySelector(".textbox").classList.add("class" + id);
 
     main.appendChild(clone);
-
-    document.getElementById(id).addEventListener("click", function() {
+    if (window.innerWidth > 900) {
+        document.getElementById(id).addEventListener("click", openDes);
+    } else {
+        document
+            .getElementById(id)
+            .parentNode.parentNode.addEventListener("click", openDes);
+    }
+    function openDes() {
         document.querySelector(".class" + id).classList.toggle("movetextbox");
-    });
+    }
     function showPainting(onePainting) {
         var PaintImg = document.getElementById(id);
         PaintImg.setAttribute(
@@ -50,10 +56,18 @@ function postPaint(paints) {
             onePainting.media_details.sizes.full.source_url
         );
         var parent = PaintImg.parentNode.parentNode.parentNode;
-        var imgWidth = document.getElementById(id).offsetWidth;
-        setTimeout(function() {
-            parent.style.minWidth = " calc(" + imgWidth + "px + 18rem) ";
-        }, 5000);
+        var imgWidth = 0;
+        if (window.innerWidth > 900) {
+            setTimeout(function() {
+                imgWidth = document.getElementById(id).offsetWidth;
+                parent.style.minWidth = " calc(" + imgWidth + "px + 18rem) ";
+            }, 1000);
+        } else {
+            setTimeout(function() {
+                imgWidth = document.getElementById(id).offsetWidth;
+                parent.style.minWidth = " calc(" + imgWidth + "px - 4rem) ";
+            }, 1000);
+        }
     }
 
     //HORIZONTAL SCROLL
@@ -61,59 +75,93 @@ function postPaint(paints) {
     var mainWidth = document
         .getElementById("main-gallery")
         .getBoundingClientRect();
-    scrollDiv.style.minWidth = mainWidth +"px"
+    scrollDiv.style.minWidth = mainWidth + "px";
     scrollDiv.style.setProperty("--main-width", counter);
 }
-
-
-
 
 // DESKTOP VERSION
 
 if (window.innerWidth > 900) {
-// HORIZONTAL SCROLL
-window.addEventListener("scroll", function() {
-    var scrollPos = window.scrollY;
-    main.style.left = "-" + scrollPos + "px";
-    var body = document.body;
-    var height = body.scrollHeight - 742;
-    var progress = (scrollPos / height) * 100;
+    // HORIZONTAL SCROLL
+    window.addEventListener("scroll", function() {
+        var scrollPos = window.scrollY;
+        main.style.left = "-" + scrollPos + "px";
+        var body = document.body;
+        var height = body.scrollHeight - 742;
+        var progress = (scrollPos / height) * 100;
 
-    if (Math.floor(progress) <= 95) {
-        document.querySelector(".progress").style.left = progress + "%";
-    } else {
-        progress = 95;
-    }
-});
-
-var scrollPosi = 0;
-
-document.querySelector(".progress").addEventListener("mousedown", scrollClick);
-window.addEventListener("mouseup", scrollUp);
-
-function scrollClick() {
-    window.addEventListener("mousemove", moveBar);
-}
-
-function scrollUp() {
-    window.removeEventListener("mousemove", moveBar);
-}
-
-function moveBar(e) {
-    var mousePos = e.clientX;
-    mousePos = event.clientX - 76;
-    var screenWidth = document.querySelector(".progressbar").offsetWidth;
-    var progress = (mousePos / screenWidth) * 100;
-    if (progress >= 0) {
         if (Math.floor(progress) <= 95) {
             document.querySelector(".progress").style.left = progress + "%";
         } else {
             progress = 95;
         }
+    });
+
+    var scrollPosi = 0;
+
+    document
+        .querySelector(".progress")
+        .addEventListener("mousedown", scrollClick);
+    window.addEventListener("mouseup", scrollUp);
+
+    function scrollClick() {
+        window.addEventListener("mousemove", moveBar);
     }
-    var height = document.body.scrollHeight - 742;
-    scrollPosi = (progress * height) / 100;
-    window.scroll(0, scrollPosi);
-    main.style.left = "-" + scrollPosi + "px";
-}
+
+    function scrollUp() {
+        window.removeEventListener("mousemove", moveBar);
+    }
+
+    function moveBar(e) {
+        var mousePos = e.clientX;
+        mousePos = event.clientX - 76;
+        var screenWidth = document.querySelector(".progressbar").offsetWidth;
+        var progress = (mousePos / screenWidth) * 100;
+        if (progress >= 0) {
+            if (Math.floor(progress) <= 95) {
+                document.querySelector(".progress").style.left = progress + "%";
+            } else {
+                progress = 95;
+            }
+        }
+        var height = document.body.scrollHeight - 742;
+        scrollPosi = (progress * height) / 100;
+        window.scroll(0, scrollPosi);
+        main.style.left = "-" + scrollPosi + "px";
+    }
+} else {
+    var logo = document.querySelector(".logo");
+    logo.setAttribute("href", "#");
+    logo.addEventListener("click", openMenu);
+    var menuCount = 0;
+
+    function openMenu() {
+        const nav = document.querySelector(".nav");
+        const navGal = document.getElementById("nav-gal");
+        const navMus = document.getElementById("nav-mus");
+        const navCon = document.getElementById("nav-con");
+        if (menuCount == 0) {
+            nav.style.height = "15rem";
+            navGal.style.top = "0";
+            navMus.style.top = "0";
+            navCon.style.top = "0";
+            navGal.addEventListener("click", function() {
+                location.href = "gallery.html";
+            });
+            navMus.addEventListener("click", function() {
+                location.href = "musil.html";
+            });
+            navCon.addEventListener("click", function() {
+                location.href = "contact.html";
+            });
+            menuCount++;
+            console.log(menuCount);
+        } else {
+            nav.style.height = "0";
+            navGal.style.top = "-5rem";
+            navMus.style.top = "-10rem";
+            navCon.style.top = "-15rem";
+            menuCount = 0;
+        }
+    }
 }

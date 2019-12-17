@@ -2,7 +2,10 @@
 @font-face {
     font-family: Musil;
     src: url(assets/MusilFont-Regular.ttf);
-    font-weight: bold;
+}
+@font-face {
+    font-family: MusilLogo;
+    src: url(assets/MusilFontLogo-Regular.ttf);
 }
 
 :root {
@@ -74,10 +77,15 @@ footer {
     padding-left: 2rem;
 }
 .footer-icon {
-   width: 2rem;
+    width: 2rem;
     margin-left: 1rem;
 }
 
+@media only screen and (max-width: 900px) {
+    .footer-icon {
+        display: none;
+    }
+}
 body {
     height: 100vh;
     padding: none;
@@ -90,9 +98,10 @@ header {
     top: 0;
     max-height: 15%;
     min-height: 7rem;
+    z-index: 1000;
 }
 
-.header-bg{
+.header-bg {
     position: absolute;
     left: 0;
     top: 0;
@@ -103,10 +112,18 @@ header {
 }
 
 .header-wrap {
-    padding: 1rem 2rem .5rem 6rem;
+    padding: 1rem 0rem 0.5rem 6rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+@media only screen and (max-width: 900px){
+    .header-wrap {
+        padding: 1rem 0 .5rem 1rem;
+        margin: 0 auto;
+justify-content: center;
+    }
 }
 
 #logo {
@@ -117,44 +134,90 @@ header {
 .nav {
     display: flex;
     justify-content: space-around;
-    font-size: 2rem;
+    font-size: 1rem;
     padding: 0;
     margin: 0;
     text-transform: uppercase;
+    width: 60%;
 }
 
+@media only screen and (max-width: 900px) {
+    .nav {
+        flex-flow: column;
+        background-color: rgba(360, 360, 360, 0.9);
+        position: absolute;
+        top: 8.5rem;
+        width: 100vw;
+        left: 0;
+        text-align: center;
+        overflow: hidden;
+        height: 0;
+        transition: all 1s;
+    }
+    #nav-gal {
+        padding-left: 1rem;
+        position: relative;
+        top: -5rem;
+        transition: all 1s;
+    }
+    #nav-mus{
+        padding-left: 1rem;
+        position: relative;
+        top: -10rem;
+        transition: all 1s;
+    }
+    #nav-con {
+        padding-left: 1rem;
+        position: relative;
+        top: -15rem;
+        transition: all 1s;
+    }
+}
 .navpoint {
-    margin: 0 1rem 0 1rem;
-    font-family: 'Musil', 'Helvetica Neue', 'Open Sans', sans-serif;
-    font-size: 4rem;
+    display: flex;
+    align-items: center;
+    height: 5rem;
+    font-family: "Musil", "Helvetica Neue", "Open Sans", sans-serif;
+    font-size: 3rem;
     cursor: pointer;
 }
 
 .active {
-    border-top: .5px solid var(--font-color);
-    padding-top: .2rem;
+    border-top: 0.5px solid var(--font-color);
+    padding-top: 0.2rem;
+}
+
+@media only screen and (max-width: 900px) {
+    .active {
+        border: none;
+        padding: none;
+    }
+    .mobileactive {
+        width: 100vw;
+        margin: 0 auto;
+        background-color: rgba(0,0,0,0.3);
+    }
 }
 
 .header-divider {
     width: 90vw;
-    height: .5px;
+    height: 0.5px;
     background-color: #000;
     margin-left: 5vw;
 }
 
 #main-gallery {
     position: fixed;
-    top:12rem;
+    top: 12rem;
     display: flex;
     max-height: 70%;
     align-items: center;
 }
 
-@media only screen and (max-width:900px){
+@media only screen and (max-width: 900px) {
     #main-gallery {
         display: block;
         position: relative;
-        z-index: -1;
     }
 }
 
@@ -163,6 +226,16 @@ header {
     width: 60vw;
     margin-right: 20vw;
     text-align: end;
+}
+
+@media only screen and (max-width: 900px) {
+    .article-wrap {
+        min-width: 100vw;
+        margin: 0 auto;
+        text-align: center;
+        margin-bottom: 4rem;
+        overflow: hidden;
+    }
 }
 
 article {
@@ -175,7 +248,7 @@ article {
 .painting {
     position: relative;
     z-index: 2;
-    box-shadow: 4px 8px 8px rgba(0,0,0,.4);
+    box-shadow: 4px 8px 8px rgba(0, 0, 0, 0.4);
     padding: 0;
     display: block;
     margin: 0 auto;
@@ -196,44 +269,79 @@ article {
     border-right: none;
     border-radius: 5px 0 0 5px;
     padding: 0 0.5rem 0 0.5rem;
-    width:13rem;
-    transition: left 1s;
+    width: 13rem;
+    transition: all 1s;
 }
 
-.textbox h1  {
-    font-family: 'Musil', 'Helvetica Neue', 'Open Sans', sans-serif;
-    font-size: 2.5rem;
+@media only screen and (max-width: 900px) {
+    .textbox {
+        top: auto;
+        bottom: -75%;
+        z-index: 10;
+        border: none;
+        background-color: rgba(360, 360, 360, 0.8);
+        width: 100%;
+        height: 70%;
+        text-align: left;
+        padding: 0 1rem 0 1rem;
+    }
+}
+
+.textbox h1 {
+    font-family: "Musil", "Helvetica Neue", "Open Sans", sans-serif;
+    font-size: 1.7rem;
     margin-bottom: 0;
+    text-align: center;
 }
 
 .movetextbox {
-    left: -13rem
+    left: -13rem;
 }
 
+@media only screen and (max-width: 900px) {
+    .movetextbox {
+        left: 0;
+        bottom: -2%;
+    }
+}
 .medium-box {
     position: absolute;
     right: -11rem;
     bottom: 2rem;
-    border: .5px var(--font-color) solid;
+    border: 0.5px var(--font-color) solid;
     border-radius: 5px;
     height: 8rem;
     width: 10rem;
     word-wrap: break-word;
     padding: 0 0.5rem 0 0.5rem;
     margin-left: 1rem;
-    font-size: .7rem;
+    font-size: 0.7rem;
 }
 
 .box-title {
-    font-family: 'Musil', 'Helvetica Neue', 'Open Sans', sans-serif;
+    font-family: "Musil", "Helvetica Neue", "Open Sans", sans-serif;
     font-size: 1.9rem;
-    margin-bottom: .5rem;
+    margin-bottom: 0.5rem;
+}
+
+.img-wrap-gallery {
+    height: 60vh;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+}
+
+@media only screen and (max-width: 900px) {
+    .img-wrap-gallery {
+        height: 100%;
+    }
 }
 
 /* HORIZANTAL SCROLL*/
 .scroll {
     --main-width: 1;
-    height: calc(var(--main-width)*80vw);
+    height: calc(var(--main-width) * 80vw);
 }
 
 ::-webkit-scrollbar {
@@ -246,8 +354,8 @@ article {
     width: 90vw;
     margin: 0 auto;
     margin-bottom: 1rem;
-    height: .7rem;
-    border: .5px solid var(--font-color);
+    height: 0.7rem;
+    border: 0.5px solid var(--font-color);
     border-radius: 5px;
     z-index: 10;
 }
@@ -258,34 +366,26 @@ article {
     left: 0;
     width: 4%;
     margin: 0;
-    height: .7rem;
+    height: 0.7rem;
     background-color: var(--font-color);
     border-radius: 5px;
     cursor: pointer;
 }
-@media only screen and (max-width:900px){
+@media only screen and (max-width: 900px) {
     .scroll {
-    display: none;
-}
+        display: none;
+    }
 
-::-webkit-scrollbar {
-    width: default;
-    background: default;
-}
+    ::-webkit-scrollbar {
+        width: default;
+        background: default;
+    }
     .progressbar {
         display: none;
     }
 }
 
 /* END HZ SCROLL */
-
-.img-wrap-gallery {
-    height: 60vh;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    align-items: center;
-}
 
 .img-wrap-musil {
     height: 100%;
@@ -300,7 +400,7 @@ article {
 #creepyface {
     position: relative;
     z-index: 0;
-     padding: 0;
+    padding: 0;
     display: block;
     margin: 0 auto;
     max-height: 100%;
@@ -308,7 +408,7 @@ article {
 }
 
 #main-musil {
-    margin-top:10rem;
+    margin-top: 10rem;
     height: 70%;
     text-align: center;
 }
@@ -322,7 +422,7 @@ article {
 
 .musil-short {
     position: absolute;
-     word-wrap: break-word;
+    word-wrap: break-word;
     border: 1px var(--font-color) solid;
     border-right: none;
     border-radius: 5px 0 0 5px;
@@ -332,14 +432,14 @@ article {
     top: 5%;
     left: 10%;
     z-index: -1;
-    transition: left .5s;
+    transition: left 0.5s;
     cursor: pointer;
-    background-color: rgba(360,360,360,.7);
+    background-color: rgba(360, 360, 360, 0.7);
 }
 
 .musil-long {
-     position: absolute;
-     word-wrap: break-word;
+    position: absolute;
+    word-wrap: break-word;
     border: 1px var(--font-color) solid;
     border-left: none;
     border-radius: 0 5px 5px 0;
@@ -349,9 +449,9 @@ article {
     top: 5%;
     right: 10%;
     z-index: -1;
-     transition: right .5s;
+    transition: right 0.5s;
     cursor: pointer;
-    background-color: rgba(360,360,360,.7)
+    background-color: rgba(360, 360, 360, 0.7);
 }
 
 #musilh3,
@@ -365,11 +465,11 @@ article {
     width: 50%;
     top: 5%;
     left: 0;
-     padding: 0 0.5rem 0 0.5rem;
+    padding: 0 0.5rem 0 0.5rem;
     overflow: hidden;
     z-index: 1;
     height: 100%;
-     transition: all .5s;
+    transition: all 0.5s;
 }
 
 .the-human {
@@ -382,12 +482,12 @@ article {
     overflow: hidden;
     z-index: 1;
     height: 100%;
-     transition: all .5s;
+    transition: all 0.5s;
 }
 
 .the-artist h2,
 .the-human h2 {
-    transition: all .5s;
+    transition: all 0.5s;
 }
 
 #contact-body {
@@ -418,10 +518,10 @@ form {
 input {
     width: 60%;
     height: 2rem;
-    border: .5px solid var(--font-color)
+    border: 0.5px solid var(--font-color);
 }
 
 textarea {
     width: 60%;
-    border: .5px solid var(--font-color)
+    border: 0.5px solid var(--font-color);
 }
