@@ -38,16 +38,7 @@ ul {
     left: 0;
     z-index: -3;
     width: 100vw;
-    background-color: #0002e;
 }
-
-@media only screen and (max-width: 900px) {
-    #titlevid {
-        width: auto;
-        height: 100vh;
-    }
-}
-
 
 #indexshade {
     position: absolute;
@@ -58,6 +49,7 @@ ul {
     height: 100vh;
     background: #fff;
     opacity: 0.7;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=70)";
 }
 
 #musilshade {
@@ -69,14 +61,17 @@ ul {
     height: 100vh;
     background: #fff;
     opacity: 0.7;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=70)";
 }
 
 #logolink {
     z-index: 100;
     position: absolute;
     left: 50%;
+    margin-left: -240px;
     margin-left: -15rem;
     top: 50%;
+    margin-top: -240px;
     margin-top: -15rem;
 }
 
@@ -93,31 +88,18 @@ footer {
     width: 100vw;
     position: fixed;
     bottom: 1vh;
+    padding-left: 32px;
     padding-left: 2rem;
 }
-@media only screen and (max-width: 900px){
-    footer {
-        position: relative;
-        display: flex;
-        justify-content: space-around;
-        padding: 2rem 0 0 0;
-        width: 60%;
-        margin: 0 auto 2rem auto
-    }
-}
 .footer-icon {
+    width: 32px;
     width: 2rem;
+    margin-left: 16px;
     margin-left: 1rem;
-}
-
-@media only screen and (max-width: 900px) {
-    .footer-icon {
-        display: none;
-    }
 }
 body {
     height: 100vh;
-    padding: none;
+    padding: 0;
     margin: 0;
     font-family: "Helvetica Neue", "Open Sans", sans-serif;
 }
@@ -126,6 +108,7 @@ header {
     position: fixed;
     top: 0;
     max-height: 15%;
+    min-height: 112px;
     min-height: 7rem;
     z-index: 1000;
 }
@@ -136,96 +119,63 @@ header {
     top: 0;
     z-index: -1;
     width: 100vw;
+    height: 136px;
     height: 8.5rem;
     background-color: #fff;
 }
 
 .header-wrap {
+    padding: 16px 0px 8px 96px;
     padding: 1rem 0rem 0.5rem 6rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
     justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
 }
 
-@media only screen and (max-width: 900px){
-    .header-wrap {
-        padding: 1rem 0 .5rem 1rem;
-        margin: 0 auto;
-justify-content: center;
-    }
-}
-
 #logo {
+    height: 96px;
     height: 6rem;
     cursor: pointer;
 }
 
 .nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -ms-flex-pack: distribute;
     justify-content: space-around;
+    font-size: 16px;
     font-size: 1rem;
     padding: 0;
     margin: 0;
     text-transform: uppercase;
     width: 60%;
 }
-
-@media only screen and (max-width: 900px) {
-    .nav {
-        flex-flow: column;
-        background-color: rgba(360, 360, 360, 0.9);
-        position: absolute;
-        top: 8.5rem;
-        width: 100vw;
-        left: 0;
-        text-align: center;
-        overflow: hidden;
-        height: 0;
-        transition: all 1s;
-    }
-    #nav-gal {
-        padding-left: 1rem;
-        position: relative;
-        top: -5rem;
-        transition: all 1s;
-    }
-    #nav-mus{
-        padding-left: 1rem;
-        position: relative;
-        top: -10rem;
-        transition: all 1s;
-    }
-    #nav-con {
-        padding-left: 1rem;
-        position: relative;
-        top: -15rem;
-        transition: all 1s;
-    }
-}
 .navpoint {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
+    height: 80px;
     height: 5rem;
     font-family: "Musil", "Helvetica Neue", "Open Sans", sans-serif;
+    font-size: 48px;
     font-size: 3rem;
     cursor: pointer;
 }
 
 .active {
     border-top: 0.5px solid var(--font-color);
+    padding-top: 3.2px;
     padding-top: 0.2rem;
-}
-
-@media only screen and (max-width: 900px) {
-    .active {
-        border: none;
-        padding: none;
-    }
-    .mobileactive {
-        width: 100vw;
-        margin: 0 auto;
-        background-color: rgba(0,0,0,0.3);
-    }
 }
 
 .header-divider {
@@ -237,17 +187,15 @@ justify-content: center;
 
 #main-gallery {
     position: fixed;
+    top: 192px;
     top: 12rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     max-height: 70%;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
-}
-
-@media only screen and (max-width: 900px) {
-    #main-gallery {
-        display: block;
-        position: relative;
-    }
 }
 
 .article-wrap {
@@ -255,16 +203,6 @@ justify-content: center;
     width: 60vw;
     margin-right: 20vw;
     text-align: end;
-}
-
-@media only screen and (max-width: 900px) {
-    .article-wrap {
-        min-width: 100vw;
-        margin: 0 auto;
-        text-align: center;
-        margin-bottom: 4rem;
-        overflow: hidden;
-    }
 }
 
 article {
@@ -297,64 +235,52 @@ article {
     border: 1px var(--font-color) solid;
     border-right: none;
     border-radius: 5px 0 0 5px;
+    padding: 0 8px 0 8px;
     padding: 0 0.5rem 0 0.5rem;
+    width: 208px;
     width: 13rem;
+    -webkit-transition: all 1s;
     transition: all 1s;
-}
-
-@media only screen and (max-width: 900px) {
-    .textbox {
-        top: auto;
-        bottom: -75%;
-        z-index: 10;
-        border: none;
-        background-color: rgba(360, 360, 360, 0.8);
-        width: 100%;
-        height: 70%;
-        text-align: left;
-        padding: 0 1rem 0 1rem;
-    }
 }
 
 .textbox h1 {
     font-family: "Musil", "Helvetica Neue", "Open Sans", sans-serif;
+    font-size: 27.2px;
     font-size: 1.7rem;
     margin-bottom: 0;
     text-align: center;
 }
 
 .movetextbox {
+    left: -208px;
     left: -13rem;
-}
-
-@media only screen and (max-width: 900px) {
-    .movetextbox {
-        left: 0;
-        bottom: -2%;
-    }
 }
 .medium-box {
     position: absolute;
+    right: -176px;
     right: -11rem;
+    bottom: 32px;
     bottom: 2rem;
     border: 0.5px var(--font-color) solid;
     border-radius: 5px;
+    height: 128px;
     height: 8rem;
+    width: 160px;
     width: 10rem;
     word-wrap: break-word;
+    padding: 0 8px 0 8px;
     padding: 0 0.5rem 0 0.5rem;
+    margin-left: 16px;
     margin-left: 1rem;
+    font-size: 11.2px;
     font-size: 0.7rem;
-}
-@media only screen and (max-width: 900px){
-    .medium-box {
-        display: hide;
-    }
 }
 
 .box-title {
     font-family: "Musil", "Helvetica Neue", "Open Sans", sans-serif;
+    font-size: 30.4px;
     font-size: 1.9rem;
+    margin-bottom: 8px;
     margin-bottom: 0.5rem;
 }
 
@@ -362,14 +288,12 @@ article {
     height: 60vh;
     margin: 0;
     padding: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
-}
-
-@media only screen and (max-width: 900px) {
-    .img-wrap-gallery {
-        height: 100%;
-    }
 }
 
 /* HORIZANTAL SCROLL*/
@@ -387,7 +311,9 @@ article {
     position: relative;
     width: 90vw;
     margin: 0 auto;
+    margin-bottom: 16px;
     margin-bottom: 1rem;
+    height: 11.2px;
     height: 0.7rem;
     border: 0.5px solid var(--font-color);
     border-radius: 5px;
@@ -396,27 +322,14 @@ article {
 
 .progress {
     position: relative;
-    transition: smooth;
     left: 0;
     width: 4%;
     margin: 0;
+    height: 11.2px;
     height: 0.7rem;
     background-color: var(--font-color);
     border-radius: 5px;
     cursor: pointer;
-}
-@media only screen and (max-width: 900px) {
-    .scroll {
-        display: none;
-    }
-
-    ::-webkit-scrollbar {
-        width: default;
-        background: default;
-    }
-    .progressbar {
-        display: none;
-    }
 }
 
 /* END HZ SCROLL */
@@ -431,12 +344,6 @@ article {
     overflow: hidden;
 }
 
-@media only screen and (max-width: 900px) {
-    #musil-body {
-        overflow: scroll;
-    }
-}
-
 #creepyface {
     position: relative;
     z-index: 0;
@@ -448,15 +355,10 @@ article {
 }
 
 #main-musil {
+    margin-top: 160px;
     margin-top: 10rem;
     height: 70%;
     text-align: center;
-}
-
-@media only screen and (max-width: 900px) {
-    #main-musil {
-        height: auto;
-    }
 }
 
 .musil-wrap {
@@ -466,30 +368,24 @@ article {
     position: relative;
 }
 
-@media only screen and (max-width: 900px){
-    .musil-wrap {
-        width: 85%;
-        height: auto;
-        display: block;
-         margin: 0 auto;
-    }
-}
-
 .musil-short {
     position: absolute;
     word-wrap: break-word;
     border: 1px var(--font-color) solid;
     border-right: none;
     border-radius: 5px 0 0 5px;
+    padding: 0 64px 0 8px;
     padding: 0 4rem 0 0.5rem;
     width: 55%;
     height: 90%;
     top: 5%;
     left: 10%;
     z-index: -1;
+    -webkit-transition: left 0.5s;
     transition: left 0.5s;
     cursor: pointer;
     background-color: rgba(360, 360, 360, 0.7);
+    line-height: 22.4px;
     line-height: 1.4rem;
     overflow: scroll;
 }
@@ -500,25 +396,262 @@ article {
     border: 1px var(--font-color) solid;
     border-left: none;
     border-radius: 0 5px 5px 0;
+    padding: 0 8px 0 72px;
     padding: 0 0.5rem 0 4.5rem;
     width: 55%;
     height: 90%;
     top: 5%;
     right: 10%;
     z-index: -1;
+    -webkit-transition: right 0.5s;
     transition: right 0.5s;
     cursor: pointer;
     background-color: rgba(360, 360, 360, 0.7);
-      line-height: 1.4rem;
-     overflow: scroll;
+    line-height: 22.4px;
+    line-height: 1.4rem;
+    overflow: scroll;
 }
 
 .musil-short h2,
 .musil-long h2 {
-    font-family: 'Musil', 'Helvetica Neue', 'Open Sana', sans-serif;
+    font-family: "Musil", "Helvetica Neue", "Open Sana", sans-serif;
+}
+
+#musilh3,
+#musilp {
+    text-align: left;
+}
+
+.the-artist {
+    position: absolute;
+    color: #fff;
+    width: 50%;
+    top: 5%;
+    left: 0;
+    padding: 0 8px 0 8px;
+    padding: 0 0.5rem 0 0.5rem;
+    overflow: hidden;
+    z-index: 1;
+    height: 100%;
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
+}
+
+.the-human {
+    position: absolute;
+    color: #fff;
+    width: 50%;
+    top: 5%;
+    right: 0;
+    padding: 0 8px 0 8px;
+    padding: 0 0.5rem 0 0.5rem;
+    overflow: hidden;
+    z-index: 1;
+    height: 100%;
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
+}
+
+.the-artist h2,
+.the-human h2 {
+    font-family: "Musil", "Helvetica Neue", "Open Sana", sans-serif;
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
+}
+
+#contact-body {
+    overflow: hidden;
+}
+
+#contact-main {
+    height: 60vh;
+    margin-top: 192px;
+    margin-top: 12rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+}
+
+.contact-body {
+    line-height: 24px;
+    line-height: 1.5rem;
+}
+
+.textcontent {
+    width: 25%;
+    text-align: end;
+    margin: 5vw;
+}
+
+.textcontent h1 {
+    font-family: "Musil", "Helvetica Neue", "Open Sana", sans-serif;
+}
+
+form {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-flow: column;
+    flex-flow: column;
+    width: 40%;
+    font-family: "Musil", "Helvetica Neue", "Open Sana", sans-serif;
+    font-size: 19.2px;
+    font-size: 1.2rem;
+}
+
+input {
+    width: 60%;
+    height: 32px;
+    height: 2rem;
+    border: 0.5px solid var(--font-color);
+}
+
+textarea {
+    width: 60%;
+    border: 0.5px solid var(--font-color);
+}
+
+button {
+    width: 20%;
+    font-family: "Musil", "Helvetica Neue", "Open Sana", sans-serif;
+    height: 32px;
+    height: 2rem;
+    font-size: 32px;
+    font-size: 2rem;
+    background: none;
+    border: none;
+    margin: 16px 0 0 20%;
+    margin: 1rem 0 0 20%;
+    cursor: pointer;
 }
 
 @media only screen and (max-width: 900px) {
+    #titlevid {
+        width: auto;
+        height: 100vh;
+    }
+    footer {
+        position: relative;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-pack: distribute;
+        justify-content: space-around;
+        padding: 2rem 0 0 0;
+        width: 60%;
+        margin: 0 auto 2rem auto;
+    }
+    .footer-icon {
+        display: none;
+    }
+    .header-wrap {
+        padding: 1rem 0 0.5rem 1rem;
+        margin: 0 auto;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+    }
+    .nav {
+        -ms-flex-flow: column;
+        flex-flow: column;
+        background-color: rgba(360, 360, 360, 0.9);
+        position: absolute;
+        top: 8.5rem;
+        width: 100vw;
+        left: 0;
+        text-align: center;
+        overflow: hidden;
+        height: 0;
+        -webkit-transition: all 1s;
+        transition: all 1s;
+    }
+    #nav-gal {
+        padding-left: 1rem;
+        position: relative;
+        top: -5rem;
+        -webkit-transition: all 1s;
+        transition: all 1s;
+    }
+    #nav-mus {
+        padding-left: 1rem;
+        position: relative;
+        top: -10rem;
+        -webkit-transition: all 1s;
+        transition: all 1s;
+    }
+    #nav-con {
+        padding-left: 1rem;
+        position: relative;
+        top: -15rem;
+        -webkit-transition: all 1s;
+        transition: all 1s;
+    }
+    .active {
+        border: none;
+        padding: 0;
+    }
+    .mobileactive {
+        width: 100vw;
+        margin: 0 auto;
+        background-color: rgba(0, 0, 0, 0.3);
+    }
+    #main-gallery {
+        display: block;
+        position: relative;
+    }
+    .article-wrap {
+        min-width: 100vw;
+        margin: 0 auto;
+        text-align: center;
+        margin-bottom: 4rem;
+        overflow: hidden;
+    }
+    .textbox {
+        top: auto;
+        bottom: -75%;
+        z-index: 10;
+        border: none;
+        background-color: rgba(360, 360, 360, 0.8);
+        width: 100%;
+        height: 70%;
+        text-align: left;
+        padding: 0 1rem 0 1rem;
+    }
+    .movetextbox {
+        left: 0;
+        bottom: -2%;
+    }
+    .medium-box {
+        display: none;
+    }
+    .img-wrap-gallery {
+        height: 100%;
+    }
+    .scroll {
+        display: none;
+    }
+    ::-webkit-scrollbar {
+        width: auto;
+        background: auto;
+    }
+    .progressbar {
+        display: none;
+    }
+    #musil-body {
+        overflow: scroll;
+    }
+    #main-musil {
+        height: auto;
+    }
+    .musil-wrap {
+        width: 85%;
+        height: auto;
+        display: block;
+        margin: 0 auto;
+    }
     .musil-short,
     .musil-long {
         position: static;
@@ -535,142 +668,34 @@ article {
     #musilmail {
         display: block;
     }
-}
-
-#musilh3,
-#musilp {
-    text-align: left;
-}
-
-.the-artist {
-    position: absolute;
-    color: #fff;
-    width: 50%;
-    top: 5%;
-    left: 0;
-    padding: 0 0.5rem 0 0.5rem;
-    overflow: hidden;
-    z-index: 1;
-    height: 100%;
-    transition: all 0.5s;
-}
-
-.the-human {
-    position: absolute;
-    color: #fff;
-    width: 50%;
-    top: 5%;
-    right: 0;
-    padding: 0 0.5rem 0 0.5rem;
-    overflow: hidden;
-    z-index: 1;
-    height: 100%;
-    transition: all 0.5s;
-}
-
-.the-artist h2,
-.the-human h2 {
-    font-family: 'Musil', 'Helvetica Neue', 'Open Sana', sans-serif;
-    transition: all 0.5s;
-}
-
-@media only screen and (max-width: 900px) {
     .the-artist,
-.the-human {
-    display: none;
-}
+    .the-human {
+        display: none;
+    }
     #musilshade {
         display: none;
     }
     #main-musil video {
         display: none;
     }
-}
-
-#contact-body {
-    overflow: hidden;
-}
-
-@media only screen and (max-width: 900px) {
     #contact-body {
         overflow: visible;
     }
-}
-
-#contact-main {
-    height: 60vh;
-    margin-top: 12rem;
-    display: flex;
-    justify-content: center;
-}
-
-@media only screen and (max-width: 900px) {
     #contact-main {
         margin-top: 10rem;
         height: auto;
+        -ms-flex-flow: column;
         flex-flow: column;
     }
-}
-
-.contact-body {
-    line-height: 1.5rem;
-}
-
-.textcontent {
-    width: 25%;
-    text-align: end;
-    margin: 5vw;
-}
-
-.textcontent h1 {
-    font-family: 'Musil', 'Helvetica Neue', 'Open Sana', sans-serif;
-}
-
-@media only screen and (max-width: 900px) {
     .textcontent {
         width: 85%;
         margin: 0 auto;
         text-align: left;
     }
-}
-
-form {
-    display: flex;
-    flex-flow: column;
-    width: 40%;
-    font-family: 'Musil', 'Helvetica Neue', 'Open Sana', sans-serif;
-    font-size: 1.2rem;
-}
-
-input {
-    width: 60%;
-    height: 2rem;
-    border: 0.5px solid var(--font-color);
-}
-
-textarea {
-    width: 60%;
-    border: 0.5px solid var(--font-color);
-}
-
-button {
-    width: 20%;
-    font-family: 'Musil', 'Helvetica Neue', 'Open Sana', sans-serif;
-    height: 2rem;
-    font-size: 2rem;
-    background: none;
-    border: none;
-    margin: 1rem 0 0 20%;
-    cursor: pointer;
-
-}
-
-@media only screen and (max-width: 900px) {
     form {
         width: 85%;
         margin: 0 auto;
     }
-
     input,
     textarea {
         width: 90%;
@@ -681,5 +706,3 @@ button {
         width: 40%;
     }
 }
-
-
