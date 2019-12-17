@@ -8,7 +8,6 @@ function getData() {
 }
 
 function showPosts(paintings) {
-    console.log(paintings);
     paintings.forEach(postPaint);
 }
 
@@ -45,25 +44,30 @@ function postPaint(paints) {
         document.querySelector(".class" + id).classList.toggle("movetextbox");
     });
     function showPainting(onePainting) {
-        document
-            .getElementById(id)
-            .setAttribute(
-                "src",
-                onePainting.media_details.sizes.full.source_url
-            );
+        var PaintImg = document.getElementById(id);
+        PaintImg.setAttribute(
+            "src",
+            onePainting.media_details.sizes.full.source_url
+        );
+        var parent = PaintImg.parentNode.parentNode.parentNode;
+        var imgWidth = document.getElementById(id).offsetWidth;
+        setTimeout(function() {
+            parent.style.minWidth = " calc(" + imgWidth + "px + 18rem) ";
+        }, 5000);
     }
-    //    document.getElementById(id).style.width = "400px";
 
     //HORIZONTAL SCROLL
     counter++;
-
+    var mainWidth = document
+        .getElementById("main-gallery")
+        .getBoundingClientRect();
+    scrollDiv.style.minWidth = mainWidth +"px"
     scrollDiv.style.setProperty("--main-width", counter);
 }
 
 // HORIZONTAL SCROLL
 window.addEventListener("scroll", function() {
     var scrollPos = window.scrollY;
-    console.log(scrollPos);
     main.style.left = "-" + scrollPos + "px";
     var body = document.body;
     var height = body.scrollHeight - 742;
@@ -105,7 +109,4 @@ function moveBar(e) {
     scrollPosi = (progress * height) / 100;
     window.scroll(0, scrollPosi);
     main.style.left = "-" + scrollPosi + "px";
-    console.log(scrollPosi);
-
-    //        console.log((mousePos / screenWidth) * 100);
 }

@@ -7,6 +7,8 @@
 
 :root {
     --font-color: #000;
+
+    --img-width: 1;
 }
 
 * {
@@ -99,6 +101,7 @@ header {
 
 #logo {
     height: 6rem;
+    cursor: pointer;
 }
 
 .nav {
@@ -114,6 +117,7 @@ header {
     margin: 0 1rem 0 1rem;
     font-family: 'Musil', 'Helvetica Neue', 'Open Sans', sans-serif;
     font-size: 4rem;
+    cursor: pointer;
 }
 
 .active {
@@ -157,17 +161,15 @@ header {
     height: .7rem;
     background-color: var(--font-color);
     border-radius: 5px;
+    cursor: pointer;
 
 }
 
 
 .article-wrap {
-/*
-    --img-width: 200px;
-    width: calc(50vw + var(--img-width));
-*/
+    min-width: calc(var(--img-width)+15rem);
     width: 60vw;
-    margin-right: 10vw;
+    margin-right: 20vw;
     text-align: end;
 }
 
@@ -187,6 +189,7 @@ article {
     margin: 0 auto;
     max-height: 100%;
     max-width: 100%;
+    cursor: pointer;
 }
 
 .textbox {
@@ -203,6 +206,11 @@ article {
     padding: 0 0.5rem 0 0.5rem;
     width:13rem;
     transition: left 1s;
+}
+
+.textbox h1  {
+    font-family: 'Musil', 'Helvetica Neue', 'Open Sans', sans-serif;
+    font-size: 3rem;
 }
 
 .movetextbox {
@@ -232,7 +240,7 @@ article {
 /* HORIZANTAL SCROLL*/
 .scroll {
     --main-width: 1;
-    height: calc(var(--main-width)*70vw);
+    height: calc(var(--main-width)*80vw);
 }
 
 ::-webkit-scrollbar {
@@ -296,6 +304,7 @@ article {
     left: 10%;
     z-index: -1;
     transition: left .5s;
+    cursor: pointer;
 }
 
 .musil-long {
@@ -304,13 +313,19 @@ article {
     border: 1px var(--font-color) solid;
     border-left: none;
     border-radius: 0 5px 5px 0;
-    padding: 0 0.5rem 0 4rem;
+    padding: 0 0.5rem 0 4.5rem;
     width: 55%;
     height: 90%;
     top: 5%;
     right: 10%;
     z-index: -1;
      transition: right .5s;
+    cursor: pointer;
+}
+
+#musilh3,
+#musilp {
+    text-align: left;
 }
 
 .the-artist {
