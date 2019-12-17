@@ -59,7 +59,7 @@ ul {
 }
 
 #indexlogo {
-    width: 30rem;
+    width: 140%;
 }
 
 svg {
@@ -73,8 +73,8 @@ footer {
     bottom: 1vh;
     padding-left: 2rem;
 }
-.fa {
-    font-size: 2rem;
+.footer-icon {
+   width: 2rem;
     margin-left: 1rem;
 }
 
@@ -219,7 +219,8 @@ article {
 
 .textbox h1  {
     font-family: 'Musil', 'Helvetica Neue', 'Open Sans', sans-serif;
-    font-size: 3rem;
+    font-size: 2.5rem;
+    margin-bottom: 0;
 }
 
 .movetextbox {
@@ -314,6 +315,7 @@ article {
     z-index: -1;
     transition: left .5s;
     cursor: pointer;
+    background-color: rgba(360,360,360,.7);
 }
 
 .musil-long {
@@ -330,6 +332,7 @@ article {
     z-index: -1;
      transition: right .5s;
     cursor: pointer;
+    background-color: rgba(360,360,360,.7)
 }
 
 #musilh3,
