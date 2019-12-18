@@ -51,10 +51,16 @@ function postPaint(paints) {
     }
     function showPainting(onePainting) {
         var PaintImg = document.getElementById(id);
-        PaintImg.setAttribute(
+        if (!onePainting.media_details.sizes.medium_large){
+            PaintImg.setAttribute(
             "src",
             onePainting.media_details.sizes.full.source_url
-        );
+        )
+        } else {
+        PaintImg.setAttribute(
+            "src",
+            onePainting.media_details.sizes.medium_large.source_url
+        );}
         var parent = PaintImg.parentNode.parentNode.parentNode;
         var imgWidth = 0;
         if (window.innerWidth > 900) {
