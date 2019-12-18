@@ -1,7 +1,7 @@
 window.onload = getData();
 
 function getData() {
-    fetch("http://camelsaidwhat.com/musil_wp/wp-json/wp/v2/the_artist")
+    fetch("https://camelsaidwhat.com/musil_wp/wp-json/wp/v2/the_artist")
         .then(e => e.json())
         .then(showPosts);
 }

@@ -1,6 +1,6 @@
 function sendMail() {
     var link =
-        "mailto:mr.skytte@me.com" +
+        "mailto:monotoniakiller@icloud.com" +
         "?cc=" +
         "&subject=" +
         escape(document.getElementById("subject").value) +

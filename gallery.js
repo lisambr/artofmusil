@@ -1,7 +1,7 @@
 window.onload = getData();
 function getData() {
     fetch(
-        "http://camelsaidwhat.com/musil_wp/wp-json/wp/v2/painting?per_page=100&_embed"
+        "https://camelsaidwhat.com/musil_wp/wp-json/wp/v2/painting?per_page=100&_embed"
     )
         .then(e => e.json())
         .then(showPosts);
@@ -24,7 +24,7 @@ function postPaint(paints) {
     const medium = paints.medium;
     const id = paints.id;
     const mediaID = paints.painting.ID;
-    fetch("http://camelsaidwhat.com/musil_wp/wp-json/wp/v2/media/" + mediaID)
+    fetch("https://camelsaidwhat.com/musil_wp/wp-json/wp/v2/media/" + mediaID)
         .then(e => e.json())
         .then(showPainting);
 
