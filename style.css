@@ -1,3 +1,5 @@
+/* GENERAL STYLE START */
+
 @import url("https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap");
 @font-face {
     font-family: Musil;
@@ -24,59 +26,6 @@ a {
 
 ul {
     list-style-type: none;
-}
-
-/* INDEX PAGE | VIDEO AND LINK */
-
-#indexbody {
-    overflow: hidden;
-}
-
-#titlevid {
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: -3;
-    width: 100vw;
-}
-
-#indexshade {
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 2;
-    width: 100vw;
-    height: 100vh;
-    background: #fff;
-    opacity: 0.7;
-    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=70)";
-}
-
-#musilshade {
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: -2;
-    width: 100vw;
-    height: 100vh;
-    background: #fff;
-    opacity: 0.7;
-    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=70)";
-}
-
-#logolink {
-    z-index: 100;
-    position: absolute;
-    left: 50%;
-    margin-left: -240px;
-    margin-left: -15rem;
-    top: 50%;
-    margin-top: -240px;
-    margin-top: -15rem;
-}
-
-#indexlogo {
-    width: 140%;
 }
 
 svg {
@@ -171,6 +120,65 @@ header {
     font-size: 3rem;
     cursor: pointer;
 }
+
+/* GENERAL STYLE END */
+
+/* INDEX PAGE START */
+
+#indexbody {
+    overflow: hidden;
+}
+
+#titlevid {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -3;
+    width: 100vw;
+}
+
+#indexshade {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    width: 100vw;
+    height: 100vh;
+    background: #fff;
+    opacity: 0.7;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=70)";
+}
+
+#musilshade {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -2;
+    width: 100vw;
+    height: 100vh;
+    background: #fff;
+    opacity: 0.7;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=70)";
+}
+
+#logolink {
+    z-index: 100;
+    position: absolute;
+    left: 50%;
+    margin-left: -240px;
+    margin-left: -15rem;
+    top: 50%;
+    margin-top: -240px;
+    margin-top: -15rem;
+}
+
+#indexlogo {
+    width: 140%;
+}
+
+/* INDEX PAGE END */
+
+/* GALLERY PAGE START */
 
 .active {
     border-top: 0.5px solid var(--font-color);
@@ -334,6 +342,10 @@ article {
 
 /* END HZ SCROLL */
 
+/* GALLERY PAGE END */
+
+/* MUSIL PAGE START */
+
 .img-wrap-musil {
     height: 100%;
     margin: 0;
@@ -459,6 +471,10 @@ article {
     transition: all 0.5s;
 }
 
+/* MUSIL PAGE END */
+
+/* CONTACT PAGE START */
+
 #contact-body {
     overflow: hidden;
 }
@@ -528,11 +544,10 @@ button {
     cursor: pointer;
 }
 
+/* MUSIL PAGE END */
+
 @media only screen and (max-width: 900px) {
-    #titlevid {
-        width: auto;
-        height: 100vh;
-    }
+   /* GENERAL STYLE START */
     footer {
         position: relative;
         display: -webkit-box;
@@ -598,6 +613,14 @@ button {
         margin: 0 auto;
         background-color: rgba(0, 0, 0, 0.3);
     }
+    /* GENERAL STYLE END */
+    /* INDEX START */
+     #titlevid {
+        width: auto;
+        height: 100vh;
+    }
+    /* INDEX END */
+    /* GALLERY START */
     #main-gallery {
         display: block;
         position: relative;
@@ -640,6 +663,8 @@ button {
     .progressbar {
         display: none;
     }
+    /* INDEX END */
+    /* MUSIL START */
     #musil-body {
         overflow: scroll;
     }
@@ -678,6 +703,8 @@ button {
     #main-musil video {
         display: none;
     }
+    /* MUSIL END */
+    /* CONTACT START */
     #contact-body {
         overflow: visible;
     }
@@ -705,4 +732,5 @@ button {
         margin: 1rem auto;
         width: 40%;
     }
+    /* CONTACT END */
 }
