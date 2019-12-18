@@ -1,12 +1,11 @@
 function sendMail() {
     var link =
         "mailto:monotoniakiller@icloud.com" +
-        "?cc=" +
-        "&subject=" +
+        "?subject=" +
         escape(document.getElementById("subject").value) +
         "&body=" +
         escape(document.getElementById("body").value) +
-        "| Sent from " +
+        " Sent from " +
         escape(document.getElementById("name").value);
 
     window.location.href = link;
