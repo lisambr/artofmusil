@@ -1,16 +1,24 @@
+// SEND MAIL FUNCTION
 function sendMail() {
     var link =
+        // SELECTS THE MAIL
         "mailto:monotoniakiller@icloud.com" +
+        // TAKES THE INPUT OF THE SUBJECT FIELD AND PASTE IT INTO THE MAIL APP OPENING
         "?subject=" +
         escape(document.getElementById("subject").value) +
+        // TAKES THE INPUT OF THE MESSAGE FIELD AND PASTE IT INTO THE MAIL APP OPENING
         "&body=" +
         escape(document.getElementById("body").value) +
+        // TAKES THE INPUT OF THE NAME FIELD AND PASTE IT INTO THE END OF THE BODY
         " Sent from " +
         escape(document.getElementById("name").value);
 
     window.location.href = link;
 }
+
+// IF ON MOBILE DO THIS
 if (window.innerWidth > !900) {
+    // SAME CODE AS IN GALLERY FOR OPENING MENU ON MOBILE
     var logo = document.querySelector(".logo");
     logo.setAttribute("href", "#");
     logo.addEventListener("click", openMenu);
